@@ -16,13 +16,13 @@ spec:
       project: roboshop
       app: nginx
 # This is pod defination
-template:
-  metadata:
-    labels:
-      purpose: deployement-demo
-      project: roboshop
-      app: nginx
-  spec:
-    containdeployement-demo:
-    - name: nginx
-      image: nginx:stable-alpine3.23-perl
+  template:
+    metadata:
+      labels:
+        purpose: deployement-demo
+        project: roboshop
+        app: nginx
+    spec:
+      containdeployement-demo:
+      - name: nginx
+        image: nginx:stable-alpine3.23-perl
