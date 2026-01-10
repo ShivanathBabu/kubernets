@@ -8,12 +8,12 @@ metadata:
     app: nginx
 spec:
   replica: 3
-  selectors:
-    matchlabels:
+  selector:
+    matchLabels:
       purpose: rs-demo
       project: roboshop
       app: nginx
-  templates:
+  template:
     metadata:
       labels:
         purpose: rs-demo
