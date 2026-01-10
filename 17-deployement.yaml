@@ -10,10 +10,11 @@ metadata:
 spec:
   replicas: 2
   # this are the labels replica set to use create pod replicas, this should match the pod labels
-  matchLabels:
-    purpose: deployement-demo
-    project: roboshop
-    app: nginx
+  selector:
+    matchLabels:
+      purpose: deployement-demo
+      project: roboshop
+      app: nginx
 # This is pod defination
 template:
   metadata:
