@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ReplicaSet
 metadata:
-  name: roboshop
+  name: nginx
   labels:
     purpose: rs-demo
     project: roboshop
