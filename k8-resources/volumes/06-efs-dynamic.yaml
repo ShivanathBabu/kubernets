@@ -5,7 +5,7 @@ metadata:
   name: efs-dynamic
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   storageClassName: efs-roboshop
   resources:
     requests:
