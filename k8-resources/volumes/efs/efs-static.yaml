@@ -25,3 +25,40 @@ spec:
   resources:
     requests:
       storage: 5Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: efs-static
+  labels:
+    purpose: efs-static-demo
+    project: roboshop
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts:
+    - name: persistant-storage
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: persistant-storage
+    persistentVolumeClaim:
+      claimName: efs-staic
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: efs-static
+  labels:
+    purpose: efs-static-demo
+    project: roboshop
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: efs-static-demo
+    project: roboshop
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
