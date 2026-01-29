@@ -45,7 +45,7 @@ spec:
     metadata:
       labels:
         purpose: statefulset
-        project: robosho # has to match .spec.selector.matchLabels
+        project: roboshop # has to match .spec.selector.matchLabels
     spec:
       containers:
       - name: nginx
